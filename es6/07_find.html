@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        const arr = [10, 20, 30, 20, 50, 60]
+
+        const result = arr.find(item => item > 30)
+        console.log(result)
+
+        const result2 = arr.find(item => item === 20)
+        console.log(result2)
+
+        //find한 값의 index 번호를 출력 
+        const result3 = arr.findIndex(item => item === 20) 
+        console.log(result3)
+    </script>
+    
+</body>
+</html>
+
+<!--
+find
+filter와 비슷, 결과는 하나의 값(처음 만나는 값을 가져온다)
+-->
