@@ -30,9 +30,8 @@
 
         //문제 - 학점 
         const score = 88
-
-        const result = score>=90 ? grade === 'a'
-        let grade = 
+        let grade = score>=90 ? 'A' : score>=80 ? 'B' : score>=70 ? 'C' : 'D'
+        console.log(`점수가 ${score}점 이므로 ${grade}학점 입니다`)
 
     </script>
 </body>
