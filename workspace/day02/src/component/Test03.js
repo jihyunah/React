@@ -1,9 +1,34 @@
-import React from 'react';
+import React, { useState } from 'react';
 
 const Test03 = () => {
+
+    const [name, setName] = useState('홍길동') //초기값을 '홍길동'으로 할거야 란 것.
+    const [age, setAge] = useState(25)
+    const [color, setColor] = useState('cyan') 
+
+    const onName = () => {
+        setName('코난') //setName 함수를 호출 
+    }
+
+    const onAge = (num) => {
+        setAge(num)
+    }
+
+    const onColor = () => {
+        setColor('yellow')
+    }
+
     return (
         <div>
-            
+            <h2 style={{background: color}}>
+                이름 : { name } / 나이 : { age }
+            </h2>
+            <p>
+                <button onClick={ onName }>코난으로 이름을 변경</button>
+                <button onClick={ () => onAge(30) }>30살로 변경</button>
+                <button onClick={ () => setAge(35) }>35살로 변경</button>
+                <button onClick={ () => onColor() }>노랑 변경</button>
+            </p>
         </div>
     );
 };
