@@ -1,4 +1,5 @@
 import React from 'react';
+import Cat from './component/Cat.js';
 import Test01 from './component/Test01.js';
 import Test02 from './component/Test02.js';
 import Test03 from './component/Test03.js';
@@ -14,7 +15,8 @@ const App = () => {
       {/* <Test03 /> */}
       {/* <Test04 /> */}
       {/* <Test05 /> */}
-      <Test06 />
+      {/* <Test06 /> */}
+      <Cat />
     </div>
   );
 };
