@@ -1,10 +1,10 @@
 import React from 'react';
 
-const Display = ({name}) => {
+const Display = (props) => {
     return (
         <div>
-             <h2>Display 컴포넌트</h2>
-            <label>내가 좋아하는 동물은 {name} 입니다. </label>
+            <h2>Display 컴포넌트</h2>
+            <h1>내가 좋아하는 동물은 { props.name } 입니다. </h1>
         </div>
     );
 };
