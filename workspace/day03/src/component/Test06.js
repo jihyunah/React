@@ -1,29 +1,39 @@
 import React, { useState } from 'react';
 
 const Test06 = () => {
-    const [name, setName] = useState('')
-    const [id, setId] = useState('')
-    const [pwd, setPwd] = useState('')
+    // const [name, setName] = useState('')
+    // const [id, setId] = useState('')
+    // const [pwd, setPwd] = useState('')
 
+    const [data, setData] = useState({
+        name: '',
+        id: '',
+        pwd: ''
+    })
+
+    const onInput = (e) => {
+        const { name, value} = e.target
+        setFruit{value};
+    }
     return (
         <div>
             <table border='1' cellPadding='5' cellSpacing='0'>
                 <tr>
                     <th width='100'>이름</th>
                     <td>
-                        <input type='text' name='name' value={name}/>
+                        <input type='text' name='name' value={name} onchange={onInput}/>
                     </td>
                 </tr>
                 <tr>
                     <th width='100'>아이디</th>
                     <td>
-                        <input type='text' name='id' value={id}/>
+                        <input type='text' name='id' value={id} onchange={onInput} />
                     </td>
                 </tr>
                 <tr>
                     <th width='100'>비밀번호</th>
                     <td>
-                        <input type='password' name='pwd' value={pwd}/>
+                        <input type='password' name='pwd' value={pwd} onchange={onInput}/>
                     </td>
                 </tr>
                 <tr>
