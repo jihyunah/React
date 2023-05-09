@@ -9,6 +9,7 @@ const Test03 = () => {
         setIsOpen(true)
     }
 
+    //상태변수와 함수는 같이 있어야한다.
     const onClose = () => {
         setIsOpen(false)
     }
