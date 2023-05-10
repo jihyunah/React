@@ -2,13 +2,21 @@ import React, { useState } from 'react';
 import Test08View from './Test08View';
 import dataList from './Test08Data';
 import '../css/Test08.css';
+import Test08Big from './Test08Big';
+
 
 const Test08Gallery = () => {
     const [data, SetData] = useState(dataList);
+    const [one, setOne] = useState(data[0]);
+
+    const onView = (id) => {
+        setOne(data[id-1])
+    }
+    
 
     return (
-        <div className='wrap'>
-            <Test08View />
+        <div className='wrap2'>
+            <Test08View one={one} data={data} onView={onView}/>
         </div>
     );
 };

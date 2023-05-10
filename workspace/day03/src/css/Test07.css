@@ -11,3 +11,4 @@
 .wrap ul li em { margin-left: 10px; height: 30px; width: 200px; padding: 0 15px; }
 .wrap h3 { text-align: center; font-size: 40px; font-weight: 500; } 
 .wrap h3 span { display: block; }
+* {background-color: black; color: lightgreen;}
