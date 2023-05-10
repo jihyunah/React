@@ -12,11 +12,12 @@ const Test02Sub = () => {
 
     useEffect(() => {
         console.log('useEffect')
-        window.addEventListener('mousemove', onMove)
+        window.addEventListener('mousemove', onMove) //window.addEventListener를 사용하여 mousemove 이벤트가 발생할 때 onMove 함수를 호출하도록 등록합니다.
 
-        return () => {
+        return () => { //Clean-up 함수를 정의 
             console.log('cleanup')
             window.removeEventListener('mouseover', onMove)
+            //window.removeEventListener를 사용하여 이전에 등록한 mousemove 이벤트 핸들러인 onMove를 제거합니다. 이를 통해 이벤트 리스너의 중복 등록을 방지하고 메모리 누수를 방지합니다.
         }
     }, [])
 
