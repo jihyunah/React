@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 
 const Test01 = () => {
     const names = '안효섭, 이제훈, 송중기, 유연석, 김세정, 김래원, 김태리, 이강인, 공유, 이준기, 이종원, 여진구'.split(',')
@@ -16,6 +16,24 @@ const Test01 = () => {
     const onAge = () => {
         setAge(age+1);
     }
+    //거의 사용 x
+    //값이 변하기만 하면 현재 실행이 된다.
+    //불필요한 사용이 너무 많다.
+    // useEffect(()=> {
+    //     console.log('안녕하세요')
+    // })
+
+    //마운트 될 때 딱 1번만 수행
+    /*
+    useEffect(()=> {
+        console.log('안녕하세요')
+    }, [])
+    */
+
+    //name의 값이 바뀔 때만 수행 
+    useEffect(() => {
+        console.log('안녕하세요')
+    }, [ name ])
 
     return (
         <div>
