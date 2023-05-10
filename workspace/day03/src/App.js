@@ -1,12 +1,14 @@
 import React from 'react';
-import Test01 from './component/Test01.js';
-import Test02 from './component/Test02.js';
-import Test03 from './component/Test03.js';
-import Test04 from './component/Test04.js';
-import Test05 from './component/Test05.js';
-import Test06 from './component/Test06.js';
+import Test01 from './component/Test01';
+import Test02 from './component/Test02';
+import Test03 from './component/Test03';
+import Test04 from './component/Test04';
+import Test05 from './component/Test05';
+import Test06 from './component/Test06';
+import Test07Main from './component/Test07Main';
+import Test08Gallery from './component/Test08Gallery';
 
-const App = () => {
+function App() {
   return (
     <div>
       {/* <Test01 /> */}
@@ -14,9 +16,11 @@ const App = () => {
       {/* <Test03 /> */}
       {/* <Test04 /> */}
       {/* <Test05 /> */}
-      <Test06 />
+      {/* <Test06 /> */}
+      <Test07Main />
+      {/* <Test08Gallery /> */}
     </div>
   );
-};
+}
 
 export default App;

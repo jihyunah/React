@@ -1,5 +1,4 @@
-import React, {useState, useRef} from 'react';
-
+import React, { useRef, useState} from 'react';
 
 const Test01 = () => {
     const [id, setId] = useState('');
@@ -8,31 +7,33 @@ const Test01 = () => {
     const idRef = useRef(null);
 
     const onChangeId = (e) => {
-        //비구조 할당, input 태그 안에 있는 모든 속성들 중에서(type, value, onChange) value 값만 꺼내오기 
-        const {value} = e.target //이벤트 발생한 대상
+        //비구조 할당, input 태그 안에 있는 모든 속성들중에서(type, value, onChange) value만 가져온다
+        const { value } = e.target //이벤트 발생한 대상
         setId(value)
     }
 
-    const onChangePwd = (event) => {
-        const {value} = event.target
-        setPwd(value);
+    const onChangePwd = (e) => {
+        //비구조 할당, input 태그 안에 있는 모든 속성들중에서(type, value, onChange) value만 가져온다
+        const { value } = e.target //이벤트 발생한 대상
+        setPwd(value)
     }
 
     const onReset = () => {
-        setId('');
-        setPwd('');
+        setId('')
+        setPwd('')
 
-        idRef.current.focus() //포커스 (항상 변하지 않고 focus 함)
+        //포커스
+        idRef.current.focus();
     }
 
     return (
         <div>
-           아이디 : <input type='text' value={ id } onChange={ onChangeId } ref={ idRef }/>
-           <br/><br/>
-           비밀번호 : <input type='password' value={ pwd } onChange={ onChangePwd}/>
-           <br/><br/>
-           <button disabled = {pwd.length < 6}>로그인</button> &emsp;
-           <button onClick={ onReset }>초기화</button> 
+            아이디 : <input type="text" value={ id } onChange={ onChangeId } ref={ idRef }/>
+            <br /><br />
+            비밀번호 : <input type="password" value={pwd} onChange={ onChangePwd }/>
+            <br /><br />
+            <button disabled={pwd.length < 6}>로그인</button> &emsp;
+            <button onClick={ onReset }>초기화</button>
         </div>
     );
 };
