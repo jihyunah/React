@@ -54,8 +54,11 @@ const Test05 = () => {
             <button onClick={ onSearch }>검색</button>
             </h3>
             <h2>
+                {
+                    state.loading || <img src={ state.data.thumbnailUrl } />
+                }
                  {
-                     state.data && state.loading ? '로딩 중' : <img src={ state.data.thumbnailUrl } />
+                     state.data && state.loading ? '로딩 중' : state.data.title
                  }
              </h2>
              <p>
