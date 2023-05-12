@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import Test04Sub from './Test04Sub.js';
 
 const Test04 = () => {
     const [color, setColor] = useState()
@@ -38,8 +39,9 @@ const Test04 = () => {
                     <input type='radio' name='food' value='짜장면' onChange={ onFood } />
                     <label>짜장면</label>
                 </p>
-                <hr/>
             </div>
+            <hr/>
+            <Test04Sub />
         </div>
     );
 };
