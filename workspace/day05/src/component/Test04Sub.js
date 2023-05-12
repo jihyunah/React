@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useMemo } from 'react';
 
 const getColor = (color) => {
     console.log('getColor')
@@ -30,6 +30,20 @@ const getFood = (food) => {
     }
 }
 const Test04Sub = ({ color, food }) => {
+    //color를 선택하건, food를 선택하건 로그가 모두 찍힌다.
+    // const colorInfo = getColor(color)
+    // const foodInfo = getFood(food)
+
+    // => 해결 방법
+    //color를 선택하면 getColor만 찍히고, food를 선택하면 getFood만 로그가 찍히도록 한다. 
+
+    const colorInfo = useMemo(() => {
+        getColor(color)
+    }, [color]) //color값 만 바뀌었을 때 부분 랜더링 
+
+    const foodInfo = useMemo(() => {
+        getFood(food)
+    }, [food]) //food값만 바뀌었을 때 부분 랜더링
     
     return (
         <div>
@@ -37,7 +51,7 @@ const Test04Sub = ({ color, food }) => {
             <h4>당신은 { colorInfo }을 좋아하시는 군요!</h4>
 
             <h3>선택한 음식 : { food }</h3>
-            <h4>당신은 { foodInfo }을 좋아하시는 군요!</h4>
+            <h4>당신은 { foodInfo }를 좋아하시는 군요!</h4>
         </div>
     );
 };
