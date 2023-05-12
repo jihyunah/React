@@ -41,6 +41,7 @@ const Test04Sub = ({ color, food }) => {
         getColor(color)
     }, [color]) //color값 만 바뀌었을 때 부분 랜더링 
 
+
     const foodInfo = useMemo(() => {
         getFood(food)
     }, [food]) //food값만 바뀌었을 때 부분 랜더링
