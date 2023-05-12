@@ -7,11 +7,15 @@ const Test04 = () => {
         const {value} = e.target
         setColor(value)
     }
+    const [food, setFood] = useState()
 
     const onFood = (e) => {
         const {value} = e.target
+        setFood(value)
     
     }
+
+    
 
     return (
         <div style={{ margin: 30 }}>
@@ -41,7 +45,7 @@ const Test04 = () => {
                 </p>
             </div>
             <hr/>
-            <Test04Sub />
+            <Test04Sub color={ color } food={ food } />
         </div>
     );
 };
