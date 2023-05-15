@@ -3,7 +3,7 @@ export default [
         id: '1',
         name: '찌오의 러브러브',
         description: '만족한 찌오',
-        photo: 'https://cdn.wadiz.kr/ft/images/green001/2022/0601/20220601235434235_96.jpg/wadiz/format/jpg/quality/80/',
+        photo: 'https://item.kakaocdn.net/do/54cf18c98bd6cec221f20a873c54670fb3a18fdf58bc66ec3f4b6084b7d0b570',
         price: 20000
     },
     { 
