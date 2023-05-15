@@ -11,7 +11,7 @@ const MemberDetail = () => {
 
     //데이터 가져오기 
     useEffect(() => {
-        axios.get(`https://jsonplaceholder.typicode.com/users`)
+        axios.get(`https://jsonplaceholder.typicode.com/users/${memberId}`)
              .then(res => setData(res.data))
     }, []) //버튼을 눌렀을 때 마다 
 
