@@ -29,6 +29,7 @@ const NavBar = () => {
                     <li><Link to='/sub01'>Sub01</Link></li>
                     */}
                 </ul>
+                <p className='close' onClick={ () => setIsNav(false) }>X</p>
             </nav>
         </div>
     );
