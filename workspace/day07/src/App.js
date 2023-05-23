@@ -1,8 +1,8 @@
 import React from 'react';
-// import App01 from './App01.js';
-// import App02 from './App02.js';
-// import App03 from './App03.js';
-// import App04 from './App04.js';
+import App01 from './App01.js';
+import App02 from './App02.js';
+import App03 from './App03.js';
+import App04 from './App04.js';
 import App05 from './App05.js';
 
 const App = () => {
@@ -11,8 +11,8 @@ const App = () => {
       {/* <App01 /> */}
       {/* <App02 /> */}
       {/* <App03 /> */}
-      {/* <App04 /> */}
-      <App05 />
+      <App04 />
+      {/* <App05 /> */}
     </div>
   );
 };

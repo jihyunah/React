@@ -5,7 +5,8 @@ import Test03Modal from './Test03Modal';
 const Test03 = () => {
     const [isOpen, setIsOpen] = useState(false) //초기값 false
     const onOpen = () => {
-        setIsOpen(true)
+        setIsOpen(true) 
+        
     }
 
     //상태변수와 함수는 같이 있어야 한다.

@@ -3,7 +3,7 @@ import { Link, Navigate, useNavigate } from 'react-router-dom';
 
 const Member = ({ item }) => {
     const {id, name, email} = item
-    const navigate = useNavigate
+    const navigate = useNavigate()
 
     const css = {
         border: '1px solid cyan', margin: 20, padding: 20
