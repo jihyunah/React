@@ -1,5 +1,6 @@
 import React from 'react';
 import { useDispatch, useSelector } from 'react-redux';
+import { red, green, blue, tomato } from '../../store/modules/color.js'
 
 const Color = () => {
     const color = useSelector(state => state.color.color)
