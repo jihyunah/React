@@ -1,8 +1,8 @@
 import React from 'react';
-import { useDispatch } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
 
 const Color = () => {
-    const color = ~~
+    const color = useSelector(state => state.color.color)
     const dispatch = useDispatch()
 
     return (

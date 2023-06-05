@@ -15,7 +15,7 @@ const initialState = { color: 'hotpink' }
 
 // 4. 리듀서 만들기 - state, action 파라미터를 참조하여, 새로운 상태 객체를 만들어서 반환한다.
 // state에는 반드시 초기값을 주어야 한다.
-const reducer = (state = initialState, action) => {
+const reducer = (state = initialState, action) => {  //state: 현재 상태, action: 액션 객체
     switch(action.type) {
         case RED:
             return { color: 'red' }
@@ -25,7 +25,10 @@ const reducer = (state = initialState, action) => {
             return { color: 'blue' }
         case TOMATO:
             return { color: 'tomato' }
-        default
+        default: //반드시 default 들어올 것.
+            return state
     }
-} //state: 현재 상태, action: 액션 객체
+} 
+
+export default reducer //Component가 아니라 순수 *.js 파일이다. 
 
