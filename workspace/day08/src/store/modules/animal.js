@@ -20,13 +20,13 @@ const initialState = { name: '', crying: '' }
 const reducer = (state = initialState, action) => { //state: 현재상태, action: 액션 객체
     switch(action.type) {
         case TIGER:
-            return { name: '호랑이', cryin: '어~흥' }
+            return { name: '호랑이', crying: '어~흥' }
         case DOG:
-            return { name: '강아지', cryin: '멍멍' }
+            return { name: '강아지', crying: '멍~멍' }
         case CAT:
-            return { name: '고양이', cryin: '야~옹' }
+            return { name: '고양이', crying: '야~옹' }
         case CHICK:
-            return { name: '병아리', cryin: '삐약삐약' }
+            return { name: '병아리', crying: '삐약 삐약' }
         default: //반드시 default가 들어가야 한다.
             return state
     }
